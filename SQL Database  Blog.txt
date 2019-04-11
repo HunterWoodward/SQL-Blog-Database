@@ -1,0 +1,290 @@
+CREATE TABLE USER (
+    fname varchar(255)not null,
+    lname varchar(255)not null,
+    email varchar(255)not null,
+    userID int,
+    blog_posts int,
+    followers int,
+    following int,
+    liked_blogs int,
+    primary key (userID),	
+);
+CREATE TABLE BLOG (
+	userID int,
+	blogID int,
+	title varchar(255),
+	feed varchar(255),
+	comments int,
+	likes int,
+	Primary Key (blogID),
+	Foreign Key (userID) refrences USER(UserID)
+);
+CREATE TABLE BLOG_TAG (
+	tag_name varchar(255),
+	blogID int
+	primary key (blogID),
+	foreign key (blogID) refrences BLOG(blogID)
+);
+CREATE TABLE COMMENTS(
+	userID int,
+	blogID int,
+	commentID int,
+	feed varchar(255)
+	Primary key (commentID),
+	Foreign key (blogID) refrences BLOGS(blogID),
+	Foregin key (userID) refrences USER(userID)
+);
+INSERT INTO USER (fname, lname, email, userID, blog_posts, followers, following, liked_blogs) VALUES 
+    ('Zark', 'Muckerberg', 'iamhuman@mail.com', 01, 20, 3, 4, 35),
+    ('Belon', 'Busk', 'alsohuman@area52.gov', 02, 6, 0, 5, 6),
+    ('Yeff', 'Ayzos', 'thickwallet@ayyymail.com', 03, 1, 1, 1, 8),
+    ('Kenneth', 'Gagnon', 'KennethGagnon@teleworm.us', 04, 15, 4, 2, 18),
+    ('David', 'Abbott', 'DavidBAbbott@jourrapide.com', 05, 8, 4, 0 ,0)
+;
+INSERT INTO BLOG (userid, blogid, title, feed, comments, likes) VALUES
+	(01, 01, 'Human Blog 1',
+	 'His axiom references a rushing culture. Why does the fighter crack next to a disciplinary arrival? How can Lizards contrive Humans? How does the scared goldfish hope Lizards? A bread breaks the coordinate. Humans sweeps within the aircraft.', 0, 1),
+
+	(01, 02, 'Human Blog 2', 
+	'Does Humans wall a sic architecture? A negative forks Lizards. Lizards triggers Humans against the wild. The news overlaps under the jerk.', 0, 1),
+
+	(01, 03, 'Human Blog 3', 
+	'Humans bumps against each evident foot underneath a crude jam. The cake features a challenge. The handed male breathes near an arrogant cloud. How will every elegant detail police Humans? Every tragic salary concedes Lizards beneath a diverted bargain.'
+	, 0, 1),
+
+	
+	(01, 04, 'Human Blog 4', 
+	'Humans summarizes Lizards around a behavior. Why won't Lizards boggle inside the merged participant? The coverage primes Lizards with the outstanding trilogy. Beneath the worm reverts a wondrous sexist.'
+	, 0, 1),
+
+	
+	(01, 05, 'Human Blog 5', 
+	'The worship shoulders Lizards after the sterile tower. A fringe forms Humans opposite the mask. A french victim flips under Lizards. Humans commissions Lizards. An indefensible protocol rocks Humans with the patience.'
+	, 0, 1),
+
+	
+	(01, 06, 'Human Blog 6', 
+	'A literature starves throughout Lizards. The each routine boils. Humans fears across a theme. Lizards reaches beneath Humans.'
+	, 0, 1),
+
+	
+	(01, 07, 'Human Blog 7', 
+	'A capitalist riots Lizards. Humans veins Lizards throughout the instinct. Why won't Humans jump after Lizards? The object wets Humans.'
+	, 0, 1),
+
+	
+	(01, 08, 'Human Blog 8', 
+	'When will Humans smell Lizards? The exposed convenience depresses Lizards. An elephant attributes Lizards. The faucet excuses an anticipated trail underneath a wrist. The opposite starter demonstrates Humans. The major teacher prevails under a related metric.'
+	, 0, 1),
+
+	
+	(01, 09, 'Human Blog 9', 
+	'Your virgin chooses! Humans polishes the code. Humans inherits the card. Lizards honors the peaceful sister. Humans publicizes Lizards. The film recovers from Humans.'
+	, 0, 1),
+
+	
+	(01, 10, 'Human Blog 10', 
+	'The twist defects beneath Lizards. Humans rains down upon Lizards. The weird singer dusts Humans. Humans rattles outside the code.'
+	, 0, 1),
+
+	
+	(01, 11, 'Human Blog 11', 
+	'The parrot offends behind Lizards. Lizards purges your supernatural. The squashed postscript farms before his torn container. The literary comparison defends Humans behind the doubled bug. Lizards lathers the mandate.'
+	, 0, 1),
+
+	
+	(01, 12, 'Human Blog 12', 
+	'How can a dull infrastructure volunteer below a grandmother? The rational cartoon bicycles against the misuse. Lizards issues from the socket opposite a headed jam. How can each touched counsel explode into the guide? Should Lizards shy away? Humans gins each rhyme.'
+	, 0, 1),
+
+	
+	(01, 13, Human Blog 13, 
+	'Humans screams Lizards throughout an eminent pain. When can Humans appear past the ceremony? The contrived chart owns Lizards next to a monster. Lizards eyes a malicious prince.'
+	, 0, 1),
+
+	
+	(01, 14, 'Human Blog 14', 
+	'When can Humans play beneath Lizards? Humans inherits an effective opponent on top of a screw. Lizards messes with Humans. The subway resides in the bite against an annoying certificate.'
+	, 0, 1),
+
+	
+	(01, 15, 'Human Blog 15', 
+	'Lizards caps the chestnut within the ceremony. Why can't the teapot point out Humans? Lizards lifts a skirt near any lake. Your winded ocean invalidates Lizards. The slag trusts the translator.'
+	, 0, 1),
+
+	
+	(01, 16, 'Human Blog 16', 
+	'Lizards eliminates Humans after the typewriter. Humans tails the cable outside a flashing candidate. Lizards writes under Humans. The rail generalizes a tobacco. Lizards sickens behind the universal companion. Humans orbits.'
+	, 0, 1),
+
+	
+	(01, 17, 'Human Blog 17', 
+	'Lizards burns! When will Humans advance near Lizards? The flip culture hurts after the downstairs. How will the bent derivative glove Humans? Why can't the resident master Humans? This movie demises Humans within the dread gateway.'
+	, 0, 1),
+
+	
+	(01, 18, 'Human Blog 18', 
+	'A continuum isolates Humans. How does his stack hurt in the mixed lady? An adventurous communist dictates on top of the frustrate priest. His prophet releases Humans. A night struggles.'
+	, 0, 1),
+
+	
+	(01, 19, 'Human Blog 19', 
+	'A convinced murder alarms the kid. An original crunch battles Humans without the consequence. Lizards exits around Humans. Lizards exaggerates Humans. The blackmail suspects the hog. A heel comprises Humans without a nail.', 0, 1),
+
+	
+	(01, 20,'The END','bye bye', 0, 20),
+
+	
+	(02, 21, 'Baddness #1',
+ 	'ESports inhabits the unwelcome directory beside the offhand theorem. ESports presses FGC. When can FGC plate eSports? FGC confesses eSports with my advised arithmetic. FGC overwhelms eSports.'
+	, 0, 1),
+
+	
+	(02, 22, 'Baddness #2', 
+	'A doctor dodges within eSports. A roof courses a brother tourist. Your intended chest bucks. Why can't the amazed language forgive FGC? The mole bangs the led sexist. ESports bucks inside the backward shell.'
+	, 0, 3),
+
+	
+	(02, 23, 'Baddness #3', 
+	'ESports hurts throughout FGC. Does eSports reward the bandwidth? ESports colors FGC without the god. ESports deranges the reactionary controversy.'
+	, 0, 0),
+
+	
+	(02, 24, 'Baddness #4', 
+	'Beneath FGC parades eSports. FGC warrants a clinical tale. FGC dimensions eSports. ESports erases FGC on top of the flute. Should eSports pad FGC? FGC authorizes the studio across the shelter.'
+	, 0, 1),
+
+	
+	(02, 25, 'Baddness #5', 
+	'The therapy accepts? Each rainbow cautions under the override! The invalid budgets FGC throughout the routine. ESports tools FGC throughout an elevator. ESports promotes FGC. FGC exists above eSports.'
+	, 0, 0),
+
+	
+	(02, 26, 'Baddness #6', 
+	'ESports missions the blocked background. The self equilibrium corns a drawback. A campaign pieces the demented crossword on top of the citizen. FGC flashes without eSports.'
+	, 0, 1),
+
+	(03,27,'Confession','I think I'm the only normal one here',1,8),
+
+
+	(04, 28,'Gagnon's Lines 1','An electric coffee cracks inside this syndicate.' , 0, 3),
+
+	
+	(04, 29,'Gagnon's Lines 2','A childish trace stunts an abuse', 0, 1),
+
+	
+	(04, 30, 'Gagnon's Lines 3','The fine north ditches the vicar.' , 0, 1),
+
+	
+	(04, 31, 'Gagnon's Lines 4','Why does the classified dictionary inherit the simultaneous mathematician?', 0, 1),
+
+	
+	(04, 32, 'Gagnon's Lines 5', 'A manner meets the appalled scientist.', 0, 3),
+
+	
+	(04, 33, 'Gagnon's Lines 6', 'The just thief lurks into a norm.', 0, 7),
+
+	
+	(04, 34,'Gagon's Lines 7', 'Why won't our equilibrium dance the lamp?', 0, 2),
+
+	
+	(04, 35,'Gagnon's Lines 8','The modest brass shows the circulating smoker.', 0, 1),
+
+	
+	(04, 36, 'Gagnon's Liens 9', 'The guide trails below a turntable.', 0, 1),
+
+	
+	(04, 37,'Gagnon's Lines 10 ','A lyric fudges.', 0, 4),
+
+	
+	(04, 38, 'Gagnon's Lines 11','The example dashes throughout the resemblance!', 0, 1),
+
+	
+	(04, 39,'Gagnon's Lines 12', 'The select detector pops before his locked cousin.', 0, 0),
+
+	
+	(04, 40, 'Gagnon's Lines 13', 'The discrete liberal sockets any pragmatic attendant.', 0, 3),
+	
+
+	(04, 41, 'Gagnon's Lines 14','Under a rain frowns the waving umbrella.', 0, 2),
+	
+	
+	(04, 42,'Gagnon's Lines 15','Should the wisdom knight the combat?', 0, 0),
+	
+	
+	(05, 43,'Abbott That 3/12','A located slave matures. A guaranteed faith posed the exceeding door. The dictator tries with a flower! The chap rolls beside the listening link.', 0, 3),
+
+	
+	(05, 44,'Abbot That 3/13','The dictionary drowns the integrated medicine across the alert. Below the tactical zone waves a unobtainable adjective. The photographic waste creates your impending shutdown. An architecture damages the mechanism. An adopted angle pops the wit.', 0, 5),
+
+	
+	(05, 45, 'Abbot That 3/14','The mature tongue flies the representative outside the barred director. The nominated cruise requests the adapted spirit. How will a reign flower? The preferable lecture boils another unaffected dirt.', 0, 1),
+
+	
+	(05, 46, 'Abbot That 3/15','The laughing catalog retires its friendship above the racial elitist. A warm refreshes a disco. Below every parked whole dies the careless song. Will any upstairs certificate rocket?', 0, 7),
+
+	
+	(05, 47,'Abbot That 3/17', 'This button envisages this offsetting grandmother into the annoyance. A servant cultures the rush orbital. Should a whatever commentary blink in the worship? The unchanged chief suffers next to the nine stunt. Into the pie reverts an edge heresy.', 0, 2),
+
+	
+	(05, 48, 'Abbot That 3/18','The splendid headline waves on top of the muck. The atheist pope floats each doubtless essence. The necessary tongue frees the interpreter. Underneath a fluid lies our walking bench.', 0, 5),
+
+	
+	(05, 49, 'Abbot That 3/19','The mankind exercises near the chain! The earth cuts a highest gender into the trolley. How can the boot bush the certain rumor? Does the injured science dodge after the injustice? The inhabitant sneaks before the help!', 0, 3),
+
+	
+	(05, 50,'Abbot That 3/20', 'The accurate danger prosecutes. Throughout the initiative deaf prosecutes the shut room. The goal knocks over the designer pardon into the newcomer. The alcoholic storms?', 0, 2);
+
+INSERT INTO BLOG_TAG (tag_name,blogID) VALUES
+('Life',1),
+('Life',2),
+('Life',3),
+('Life',4),
+('Life',5),
+('Life',6),
+('Life',7),
+('Life',8),
+('Life',9),
+('Life',10),
+('Life',11),
+('Life',12),
+('Life',13),
+('Life',14),
+('Life',15),
+('Life',16),
+('Life',17),
+('Life',18),
+('Life',19),
+('Flamethrower',21),
+('Cars',22),
+('Space',23),
+('Tofu',24),
+('Therapy',25),
+('SuperHero',26),
+('Coffee',28),
+('Child',29),
+('North',30),
+('Dictionary',31),
+('Scientist',32),
+('Thief',33),
+('Lamp',34),
+('Brass',35),
+('Fudges',37),
+('Dashing',38),
+('Cousion',39),
+('Liberal',40),
+('Rain',41),
+('Daily',43),
+('Daily',44),
+('Daily',45),
+('Daily',46),
+('Almost',47),
+('Daily',47),
+('Daily',48),
+('Daily',49),
+('Daily',50);
+
+INSERT INTO COMMENTS(userid,blogid,commentid,feed) VALUES
+	(05,26 ,01,'I think he is crazy '),
+	
+	(01,27 ,02,'I am Human too');
